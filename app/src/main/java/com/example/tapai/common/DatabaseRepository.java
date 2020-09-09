@@ -98,7 +98,7 @@ public class DatabaseRepository<T> implements Common.Repository<T> {
         if (table_Name == null || table_Name.isEmpty()) {
             initTable();
         }
-        sqLiteDatabase.execSQL("drop table " + table_Name);
+        sqLiteDatabase.execSQL("drop table if exists " + table_Name);
         onCreate();
     }
 
